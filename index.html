@@ -32,9 +32,31 @@
 
 <p>This is an overview of my DevOps stack. The tools I use, and why I use them.</p>
 
-<p><code>$ cat /etc/issue</code>
-<code>Matthew Karmazyn</code>
-<code>matthew.karmazyn@gmail.com</code></p>
+<p>'''
+$ cat /etc/about/me.json
+<code>{</code>
+<code>"Basic": {</code>
+<code>"Name": "Matthew Karmazyn",</code>
+<code>"Occupation": "Systems Engineer",</code>
+<code>"Email": "matthew.karmazyn@gmail.com"</code>
+<code>},</code>
+<code>"Likes": [</code>
+<code>"Computers",</code>
+<code>"Golf",</code>
+<code>"Video Games"</code>
+<code>],</code>
+<code>"Dislikes": [</code>
+<code>"The fact that json does not support comments.",</code>
+<code>"Something else"</code>
+<code>]</code>
+<code>}</code>
+{
+  {
+    {
+    }
+  }
+}
+'''</p>
 
 <h3>
 <a id="it-all-starts-with-the-os" class="anchor" href="#it-all-starts-with-the-os" aria-hidden="true"><span class="octicon octicon-link"></span></a>It all starts with the OS</h3>
@@ -44,12 +66,12 @@
 <h3>
 <a id="infrastrucutre-who-needs-it" class="anchor" href="#infrastrucutre-who-needs-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Infrastrucutre, who needs it?</h3>
 
-<p>Datacenters are great, but they are a lot of work. Lots of people, lots of space, lots of hardware, power, ups, generators... Scratch all that and go to the cloud. I personally use Amazon Web Services for my cloud computing. They are doing things that your datacenter can't, and probably for less.</p>
+<p>Datacenters are great, but they are a lot of work. Lots of people, lots of space, lots of hardware, power, ups, generators... Scratch all that and go to the cloud. I personally use Amazon Web Services for my cloud computing. They are doing things that your datacenter doesn't, and probably for less.</p>
 
 <h3>
 <a id="packer" class="anchor" href="#packer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packer</h3>
 
-<p>Packer stuff.</p>
+<p>Use <a href="https://packer.io/">Packer</a> to build identical images for multiple platforms. In my case, from the same set of scripts I can build an Amazon Machine Image used for production, and a Docker Container or a Vagrant box for development. Using packer, I can hand my developers a production instance on their local workstations. No more dependency issues, no more "It works on my laptop, I don't know why it's not working on the QA server." </p>
 
 <h3>
 <a id="devtest" class="anchor" href="#devtest" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dev/Test</h3>
