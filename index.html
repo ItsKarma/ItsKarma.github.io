@@ -60,23 +60,22 @@ Docker</p>
 <h3>
 <a id="configuration-management" class="anchor" href="#configuration-management" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration Management</h3>
 
-<p>In a past life I've used Chef. It was great, and I would totally recommend it.
-Today I'm using Ansible. Agentless, uses ssh, it's nice and simple.</p>
+<p><a href="http://chef.io">Chef</a> is my tool of choice for configuration management. I also use the chef server as my single source of truth. No need for an inventory system, it's all in chef already. I use knife to query details about my nodes and publish them to an internal site, typically confluence, for all to view.</p>
 
 <h3>
-<a id="continuous" class="anchor" href="#continuous" aria-hidden="true"><span class="octicon octicon-link"></span></a>Continuous</h3>
+<a id="continuous-integration" class="anchor" href="#continuous-integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Continuous Integration</h3>
 
-<p>Jenkins</p>
+<p>Jenkins for automated builds and push button deployments.</p>
 
 <h3>
 <a id="automate-all-the-things" class="anchor" href="#automate-all-the-things" aria-hidden="true"><span class="octicon octicon-link"></span></a>Automate All The Things!</h3>
 
-<p>I'm allergic to doing things twice. Automate all the things!</p>
+<p>I'm allergic to doing things twice. I like to do something once to understand the process, then the automation begins. I don't actually want to do any work, and I work very hard to make that happen by automating everything. It keeps me busy ;) My scripts and tools are typically written in bash or python depending on the complexity.</p>
 
 <h3>
 <a id="logging" class="anchor" href="#logging" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logging</h3>
 
-<p>Logstash - with rsyslog</p>
+<p><a href="https://www.elastic.co/webinars/introduction-elk-stack">ELK Stack</a> (Elasticsearch Logstash Kibana) with rsyslog forwarding the logs to a central logging server takes the load off the app server. The approach using rsyslog also frees up some memory and cpu cycles on the instance for more important tasks.</p>
 
 <h3>
 <a id="backup" class="anchor" href="#backup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Backup</h3>
@@ -92,7 +91,17 @@ Today I'm using Ansible. Agentless, uses ssh, it's nice and simple.</p>
       </footer>
     </div>
 
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-63777307-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
 
   </body>
 </html>
