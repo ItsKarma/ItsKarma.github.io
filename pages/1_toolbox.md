@@ -11,13 +11,6 @@ permalink: /toolbox/
 # My Toolbox
 This page holds some of my useful tools and commands.
 
-# Vagrant
-After updating vagrant you should also update the guest additions
-You can find them here: http://download.virtualbox.org/virtualbox/
-
-    wget http://download.virtualbox.org/virtualbox/5.0.4/VBoxGuestAdditions_5.0.4.iso
-    sudo mv VBoxGuestAdditions_5.0.4.iso /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
-
 # Linux
 generate epoch.
 
@@ -83,15 +76,6 @@ read pcap tcpdump file
 
     tcpdump -r /tmp/server.pcap
 
-# Java  
-take java thread dump.
-
-    jmap -dump:format=b,file=$(hostname).hprof <pid>
-    kill -3 <pid>
-
-# PHP  
-[adjusting php-fpm children nginx](http://myshell.co.uk/blog/2012/07/adjusting-child-processes-for-php-fpm-nginx/)
-
 # sed  
 creates a new line with "newtext" in the line above the matching pattern.
 
@@ -147,6 +131,15 @@ creates a new line with "newtext" 3 lines after the matching pattern.
     # add logical volume(s) to /etc/fstab so they are mounted automatically on reboot
     echo "/dev/data/data /data ext4 defaults 0 0" >> /etc/fstab
 
+# Java  
+take java thread dump.
+
+    jmap -dump:format=b,file=$(hostname).hprof <pid>
+    kill -3 <pid>
+
+# PHP  
+[adjusting php-fpm children nginx](http://myshell.co.uk/blog/2012/07/adjusting-child-processes-for-php-fpm-nginx/)
+
 # Docker
 remove all containers.
 
@@ -155,6 +148,13 @@ remove all containers.
 set docker-machine environment.
 
     docker-machine env
+
+# Vagrant
+After updating vagrant you should also update the guest additions
+You can find them here: http://download.virtualbox.org/virtualbox/
+
+    wget http://download.virtualbox.org/virtualbox/5.0.4/VBoxGuestAdditions_5.0.4.iso
+    sudo mv VBoxGuestAdditions_5.0.4.iso /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
 
 # Git  
 [undo almost anything with git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
