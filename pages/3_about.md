@@ -9,7 +9,7 @@ permalink: /about/
 
 ## About Me
 
-### BasicInfo
+### Basic Info
 Name: Matthew Karmazyn  
 Location: Lehigh Valley, PA  
 Occupation: Systems Engineer  
