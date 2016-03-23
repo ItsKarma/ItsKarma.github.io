@@ -56,6 +56,10 @@ find files that were most recently modified.
 
     find . -type f | xargs stat --format '%Y :%y %n' | sort -nr | cut -d: -f2- | head
 
+track installed from an rpm
+
+    rpm -ql openvpn
+
 ps1 generator  
 https://www.kirsle.net/wizards/ps1.html  
 
@@ -206,7 +210,8 @@ Google Power User - http://i.imgur.com/qmsBvjC.jpg - image of how to use google
 rss bot (mac osx) - https://itunes.apple.com/us/app/rss-bot-news-notifier/id605732865  
 EC2 Instances http://www.ec2instances.info/  
 Disk Inventory X - http://www.derlien.com/ - graphical way to visualize disk space on your mac  
-saws - https://github.com/donnemartin/saws - A supercharged AWS command line interface
+saws - https://github.com/donnemartin/saws - A supercharged AWS command line interface  
+ipcalc - ```brew install ipcalc```  
 
 # Fun Stuff
 Daniel H.C. Peterson aka dhcp  
