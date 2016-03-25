@@ -212,6 +212,7 @@ EC2 Instances http://www.ec2instances.info/
 Disk Inventory X - http://www.derlien.com/ - graphical way to visualize disk space on your mac  
 saws - https://github.com/donnemartin/saws - A supercharged AWS command line interface  
 ipcalc - ```brew install ipcalc```  
+jxplorer - http://jxplorer.org/ - java ldap browser
 
 # Fun Stuff
 Daniel H.C. Peterson aka dhcp  
