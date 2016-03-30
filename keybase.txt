@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/itskarma
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://itskarma.wtf
+  * I am itskarma (https://keybase.io/itskarma) on keybase.
+  * I have a public key ASDTvl5KWwtNcgjlqfqzQ5KCg-fRd5mBcnfm85iwBAMfKwo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120d3be5e4a5b0b4d7208e5a9fab343928283e7d17799817277e6f398b004031f2b0a",
+            "host": "keybase.io",
+            "kid": "0120d3be5e4a5b0b4d7208e5a9fab343928283e7d17799817277e6f398b004031f2b0a",
+            "uid": "40457fa0a15ed4ccf9cbacabe9821e19",
+            "username": "itskarma"
+        },
+        "service": {
+            "hostname": "itskarma.wtf",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.14"
+    },
+    "ctime": 1459287403,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1459287356,
+        "hash": "359583d4ffc7eb1b9e15c143319bf6ff95f87bcd363016a8fe7a469e7864e7e06f04dd4122bf0a0bde6bce8d11476af3fc16e2cb83fb462c2bc50cb791ed2bdc",
+        "seqno": 424788
+    },
+    "prev": "98e07738b6f148e6540770e04a85f9743067345ff0356994eaac5f51d2347cf3",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg075eSlsLTXII5an6s0OSgoPn0XeZgXJ35vOYsAQDHysKp3BheWxvYWTFAvN7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZDNiZTVlNGE1YjBiNGQ3MjA4ZTVhOWZhYjM0MzkyODI4M2U3ZDE3Nzk5ODE3Mjc3ZTZmMzk4YjAwNDAzMWYyYjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZDNiZTVlNGE1YjBiNGQ3MjA4ZTVhOWZhYjM0MzkyODI4M2U3ZDE3Nzk5ODE3Mjc3ZTZmMzk4YjAwNDAzMWYyYjBhIiwidWlkIjoiNDA0NTdmYTBhMTVlZDRjY2Y5Y2JhY2FiZTk4MjFlMTkiLCJ1c2VybmFtZSI6Iml0c2thcm1hIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJpdHNrYXJtYS53dGYiLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE0In0sImN0aW1lIjoxNDU5Mjg3NDAzLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NTkyODczNTYsImhhc2giOiIzNTk1ODNkNGZmYzdlYjFiOWUxNWMxNDMzMTliZjZmZjk1Zjg3YmNkMzYzMDE2YThmZTdhNDY5ZTc4NjRlN2UwNmYwNGRkNDEyMmJmMGEwYmRlNmJjZThkMTE0NzZhZjNmYzE2ZTJjYjgzZmI0NjJjMmJjNTBjYjc5MWVkMmJkYyIsInNlcW5vIjo0MjQ3ODh9LCJwcmV2IjoiOThlMDc3MzhiNmYxNDhlNjU0MDc3MGUwNGE4NWY5NzQzMDY3MzQ1ZmYwMzU2OTk0ZWFhYzVmNTFkMjM0N2NmMyIsInNlcW5vIjo3LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQI1q9wUI3SNWj00J7hV/wowL+XwoME8gSUYeh0EwOei3CIL/GnUtWGt4NJF8N2H6KTY5Lul+oZA1F5SyXOhaYAaoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/itskarma
+
+==================================================================
