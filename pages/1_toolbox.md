@@ -153,6 +153,13 @@ set docker-machine environment.
 
     docker-machine env
 
+find if you are in a docker container.
+
+    grep docker /proc/1/cgroup > /dev/null
+    if [ $? == 0 ]; then
+      echo "we're in a docker container!"
+    fi
+
 # Vagrant
 After updating vagrant you should also update the guest additions
 You can find them here: http://download.virtualbox.org/virtualbox/
