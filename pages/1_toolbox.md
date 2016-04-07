@@ -174,6 +174,10 @@ pretty format
 
     git log -1 --pretty=format:"%nCommit: %H%nAuthor: %an%nDate: %ad%nTag: %d%nSubject: %s%n%n"
 
+get starred repositories rss pages for a user
+
+    curl -s https://api.github.com/users/itskarma/starred | jq -r .[].html_url | sed 's/$/\/releases.atom/'
+
 # Postgres  
 list databases
 
