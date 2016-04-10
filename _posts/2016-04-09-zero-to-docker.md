@@ -79,6 +79,6 @@ We know the name of our `cent` container, but what about any other containers we
 
 Now let's remove them all because we want to keep our environment clean.
 
-   docker rm $(docker ps -aq)
+    docker rm $(docker ps -aq)
 
 If you run docker ps -q again, you'll see we have no more containers.
