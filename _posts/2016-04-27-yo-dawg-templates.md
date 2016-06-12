@@ -32,7 +32,10 @@ In this example we will have an auto-scaling web server group behind an HAProxy 
 
 How do we update HAProxy when a new web server is launched
 
-* New web server is launched. A startup script registers it with Consul.
+* New web server is launched.
+* A startup script executes Chef with an environment/role.
+* Chef lays down the consul-template .ctpl file.
+* The instance registers with the Consul cluster.
 * Consul pushes the new web server's data to consul-template on the HAProxy instance.
 * consul-template renders a new config with the new web server.
 * Since a change was made to the template, consul-template reloads the HAProxy config file.
