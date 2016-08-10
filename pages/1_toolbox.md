@@ -214,7 +214,7 @@ Jenkins - https://jenkins-ci.org/ - automation
 Chef - https://www.chef.io/ - configuration management  
 Ansible - https://www.ansible.com/ - configuration management  
 Packer - https://packer.io/ - image management  
-terraform - https://www.terraform.io/ - infrastructure as code  
+Terraform - https://www.terraform.io/ - infrastructure as code  
 Requestdiff - http://requestdiff.com/ - diff's http requests  
 HTTP Statuses - https://httpstatuses.com/ - simple list of http status codes  
 Google Power User - http://i.imgur.com/qmsBvjC.jpg - image of how to use google  
