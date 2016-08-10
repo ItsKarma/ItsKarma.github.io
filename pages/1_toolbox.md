@@ -201,7 +201,7 @@ show max connections
     show max_connections;
 
 # Dev Tool Links
-Homebrew - brew.sh
+Homebrew - brew.sh  
 RescueTime - https://www.rescuetime.com - tracks your time and productivity  
 Atom - http://atom.io - desktop editor (plugins: vim mode, markdown, minimap, git diff)  
 Mou - http://25.io/mou/ - markdown editor (now I use the markdown plugin for atom)  
@@ -223,7 +223,7 @@ EC2 Instances http://www.ec2instances.info/
 Disk Inventory X - http://www.derlien.com/ - graphical way to visualize disk space on your mac  
 saws - https://github.com/donnemartin/saws - A supercharged AWS command line interface  
 ipcalc - ```brew install ipcalc```  
-jxplorer - http://jxplorer.org/ - java ldap browser
+jxplorer - http://jxplorer.org/ - java ldap browser  
 
 # Fun Stuff
 Daniel H.C. Peterson aka dhcp  
