@@ -20,4 +20,7 @@ test
 
 test
 
-test 2
+`test 2`
+
+| test1 | test2 |
+| test3 | test4 |
