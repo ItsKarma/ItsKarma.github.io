@@ -80,6 +80,10 @@ read pcap tcpdump file
 
     tcpdump -r /tmp/server.pcap
 
+netcat to test connection
+
+    nc -znv 192.168.1.100 443
+
 # sed  
 creates a new line with "newtext" in the line above the matching pattern.
 
