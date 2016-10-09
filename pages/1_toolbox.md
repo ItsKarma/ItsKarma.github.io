@@ -80,7 +80,6 @@ read pcap tcpdump file
 
     tcpdump -r /tmp/server.pcap
 
-<<<<<<< HEAD
 test ssl
 
     openssl s_client -showcerts -connect www.google.com:443
@@ -88,11 +87,10 @@ test ssl
 ssl checker
 
     https://www.sslshopper.com/ssl-checker.html
-=======
+
 netcat to test connection
 
     nc -znv 192.168.1.100 443
->>>>>>> 7de5a9420a1bd69a9378cf533c23788ea38970b0
 
 # sed  
 creates a new line with "newtext" in the line above the matching pattern.
