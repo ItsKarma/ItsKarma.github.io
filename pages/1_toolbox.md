@@ -24,7 +24,7 @@ convert epoch to human readable time.
 screen
 
     # start a screen.
-    screen -s screen_name
+    screen -S screen_name
     # detach from a screen.
     ctrl+a d
     # show running screens.
