@@ -2,7 +2,7 @@
 layout: post
 title:  "Determine Subshell Level"
 date:   2020-09-08
-created:   2020-09-08
+created:   2020-09-16
 author:   Matt Karmazyn
 categories: bash linux
 ---
@@ -23,4 +23,4 @@ $ echo $SHLVL
 1
 ```
 
-I will likely be including this in my `$PS1` prompt going forward.
+I now include this in my `$PS1` prompt for ease of use.
