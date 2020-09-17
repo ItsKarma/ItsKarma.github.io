@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Determine Subshell Level"
-date:   2020-09-08
-created:   2020-09-16
+date:   2020-09-16
+created:   2020-09-08
 author:   Matt Karmazyn
 categories: bash linux
 ---
