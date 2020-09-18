@@ -12,21 +12,21 @@ How to measure the success of DevOps in your organization.
 
 There are four key metrics you want to measure when trying to determine how successful DevOps is in your organization.
 
-1. Deployment Frequency
-2. Lead Time
-3. Mean Time to Resolve (MTTR)
-4. Change Failure Rate
+1.  Deployment Frequency
+2.  Lead Time
+3.  Mean Time to Resolve (MTTR)
+4.  Change Failure Rate
 
 
 ## Deployment Frequency
 
-Deployments per day
-Deployments per day per engineer
-Small Batch Sizes
+Deployments per day  
+Deployments per day per engineer  
+Small Batch Sizes  
 Deploy as-needed
 
 How to Track?  
-- Track directly from your deployment tool - [DeployBoard](https://www.deployboard.io)
+-  Track directly from your deployment tool - [DeployBoard](https://www.deployboard.io)
 
 
 ## Lead Time
@@ -38,8 +38,8 @@ Definition: I have seen this tracked two different ways.
 I believe it is important to track both of these separately. We want to know how much work our developers are capable of in order to draw an accurate roadmap. We also want to know the length of our deployment pipeline, and be able to trend this over time.
 
 How to Track?  
-- If you are including the development time, you can track within your Project Management Software.
-- If you are only counting time from commit to production, you can track this within your deployment tool - [DeployBoard](https://www.deployboard.io)
+1.  If you are including the development time, you can track within your Project Management Software.
+2.  If you are only counting time from commit to production, you can track this within your deployment tool - [DeployBoard](https://www.deployboard.io)
 
 
 ## Mean Time to Resolve (MTTR)
