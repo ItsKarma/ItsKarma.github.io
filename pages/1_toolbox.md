@@ -189,6 +189,10 @@ pretty format
 get starred repositories rss pages for a user
 
     curl -s https://api.github.com/users/itskarma/starred | jq -r .[].html_url | sed 's/$/\/releases.atom/'
+    
+rewriting the most recent commit message
+
+    git commit --amend
 
 # Postgres  
 list databases
