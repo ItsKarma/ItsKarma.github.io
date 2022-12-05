@@ -12,7 +12,7 @@ permalink: /mystack/
 This is an overview of my technology stack. The tools I use, and why I use them. I try to keep a post about each of these topics that cover them in more detail.
 
 ### It all starts with the OS
-Linux: I prefer the RHEL family, and me being a free man, I like CentOS. When my head is in the clouds, I use Amazon Linux because it is optimized for the AWS/EC2 ecosystem.
+Linux: I prefer the RHEL family, and me being a free man, I like CentOS. Most of the work I do lately is on AWS, so I use Amazon Linux because it is optimized for the AWS/EC2 ecosystem.
 
 
 ### Infrastructure, who needs it?
@@ -51,7 +51,7 @@ I prefer this quote instead
     "Everything fails, all the time."
     - Werner Vogels
 
-Now lets look at what is backed up, and where.
+Now let's look at what is backed up, and where.
 
 Source Code - GitHub  
 Chef Cookbooks (or other config management) - GitHub  
