@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("keybase.txt");
   eleventyConfig.addPassthroughCopy("favicon.svg");
+  eleventyConfig.addPassthroughCopy(".nojekyll");
 
   // Add a collection for blog posts
   eleventyConfig.addCollection("posts", function(collectionApi) {
