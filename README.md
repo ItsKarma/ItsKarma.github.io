@@ -31,7 +31,7 @@ The site will be available at `http://localhost:8080`
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages via GitHub Actions when you push to the `main` or `refactor` branch.
+The site automatically deploys to GitHub Pages via GitHub Actions when you push to the `main` branch.
 
 ## Adding Content
 
@@ -46,5 +46,3 @@ date: 2025-11-22
 
 Your content here...
 ```
-
-That's it! No categories, no tags, no complexity.
