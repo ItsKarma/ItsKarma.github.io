@@ -1,14 +1,10 @@
 ---
-layout: post
+layout: base.html
 title:  "Immutable Deployments"
 date:   2016-06-12
-created:   2016-06-12
-author:   Matt Karmazyn
-categories: deployment production immutable infrastructure
 ---
 Immutable infrastructure lessons learned.
 
-<!--break-->
 
 I share some lessons learned from managing an immutable infrastructure using AWS. These ideas generally translate to any cloud provider.
 

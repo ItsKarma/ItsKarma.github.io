@@ -1,14 +1,10 @@
 ---
-layout: post
+layout: base.html
 title:  "SSH proxy config"
 date:   2016-04-07
-created:   2016-04-07
-author:   Matt Karmazyn
-categories: ssh tunnel proxy
 ---
 Set up SSH proxy config file.
 
-<!--break-->
 
 I always like to keep a bastion host or jumpbox in a dmz so I can tunnel through it to a private network. In AWS this can be a t2.nano instance and can be shared with other admins (each having their own user account).
 

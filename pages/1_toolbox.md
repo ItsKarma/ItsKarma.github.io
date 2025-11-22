@@ -1,12 +1,8 @@
 ---
-layout: page
+layout: base.html
 title: Toolbox
-comments: true
 permalink: /toolbox/
 ---
-
-* content
-{:toc}
 
 # My Toolbox
 This page holds some of my useful tools and commands.
@@ -14,51 +10,67 @@ This page holds some of my useful tools and commands.
 # Linux
 generate epoch.
 
-    date +%s
+```date +%s```
 
 convert epoch to human readable time.
 
-    # where 11111111 is your epoch
-    date -d @11111111
+```
+# where 11111111 is your epoch
+date -d @11111111
+```
 
 screen
 
-    # start a screen.
-    screen -S screen_name
-    # detach from a screen.
-    ctrl+a d
-    # show running screens.
-    screen -r
-    # reattach to a running screen.
-    screen -r screen_name
+```
+# start a screen.
+screen -S screen_name
+# detach from a screen.
+ctrl+a d
+# show running screens.
+screen -r
+# reattach to a running screen.
+screen -r screen_name
+```
 
 unlock user account.
 
-    pam_tally2 -r -u username
+```
+pam_tally2 -r -u username
+```
 
 check the exit code of the last command in a linux terminal.
 
-    echo $?
+```
+echo $?
+```
 
 fork bomb (DANGER! DO NOT RUN THIS! - it will crash your system)
 
-    :(){ :|: & };:
+```
+:(){ :|: & };:
+```
 
 debug core dumps with gdb.
 
-    gdb -c core.xxxx
-    # backtrace
-    (gdb) bt
-    # list instructions/code
-    (gdb) list
+```
+gdb -c core.xxxx
+# backtrace
+(gdb) bt
+# list instructions/code
+(gdb) list
+```
 
 find files that were most recently modified.
 
-    find . -type f | xargs stat --format '%Y :%y %n' | sort -nr | cut -d: -f2- | head
+```
+find . -type f | xargs stat --format '%Y :%y %n' | sort -nr | cut -d: -f2- | head
+```
 
 track installed from an rpm
 
-    rpm -ql openvpn
+```
+rpm -ql openvpn
+```
 
 ps1 generator  
 https://www.kirsle.net/wizards/ps1.html  
@@ -66,92 +78,122 @@ https://www.kirsle.net/wizards/ps1.html
 # Networking
 tcpdump listen for all traffic on port 5000
 
-    tcpdump -i eth0 port 5000
+```
+tcpdump -i eth0 port 5000
+```
 
 tcpdump listen for all traffic from a specific source on port 80
 
-    tcpdump -i eth0 src 192.168.1.100 and port 80
+```
+tcpdump -i eth0 src 192.168.1.100 and port 80
+```
 
 tcpdump listen for all traffic on port 80 and write to file to view later in wireshark
 
-    tcpdump -i eth0 src 192.168.1.100 and port 80 -w /tmp/server.pcap
+```
+tcpdump -i eth0 src 192.168.1.100 and port 80 -w /tmp/server.pcap
+```
 
 read pcap tcpdump file
 
-    tcpdump -r /tmp/server.pcap
+```
+tcpdump -r /tmp/server.pcap
+```
 
 test ssl
 
-    openssl s_client -showcerts -connect www.google.com:443
+```
+openssl s_client -showcerts -connect www.google.com:443
+```
 
 ssl checker
 
-    https://www.sslshopper.com/ssl-checker.html
+```
+https://www.sslshopper.com/ssl-checker.html
+```
 
 netcat to test connection
 
-    nc -znv 192.168.1.100 443
+```
+nc -znv 192.168.1.100 443
+```
 
 # sed  
 creates a new line with "newtext" in the line above the matching pattern.
 
-    sed '/quartzSchedulerControl/inewtext' /path/to/file
+```
+sed '/quartzSchedulerControl/inewtext' /path/to/file
+```
 
 creates a new line with "newtext" 3 lines after the matching pattern.
 
-    sed '/quartzSchedulerControl/!{p;d;};n;n;n;a newtext' /path/to/file
+```
+sed '/quartzSchedulerControl/!{p;d;};n;n;n;a newtext' /path/to/file
+```
 
 # LVM  
 <b>Physical Volume</b>
 
-    # create the physical volume(s)
-    pvcreate /dev/xvdf
-    # show the attributes of the physical volume(s)
-    pvdisplay
+```
+# create the physical volume(s)
+pvcreate /dev/xvdf
+# show the attributes of the physical volume(s)
+pvdisplay
+```
 
 <b>Volume Group</b>
 
-    # creates volume group called “data” using the physical volume(s) shown
-    vgcreate data /dev/xvdf
-    # show attributes of “data” volume group
-    vgdisplay
-    # show attributes of “data” volume group
-    vgdisplay -s
-    # scan physical volumes
-    vgscan
+```
+# creates volume group called “data” using the physical volume(s) shown
+vgcreate data /dev/xvdf
+# show attributes of “data” volume group
+vgdisplay
+# show attributes of “data” volume group
+vgdisplay -s
+# scan physical volumes
+vgscan
+```
 
 <b>Logical Volume</b>
 
-    # create the logical volume named “data” from the “data” volume group
-    lvcreate --name data --size 99G data (leave 1% out)
-    # show attributes of the logical volume(s)
-    lvdisplay
-    # show attributes of the logical volume(s)
-    lvdisplay -C
-    # show attributes of the logical volume(s)
-    lvscan
+```
+# create the logical volume named “data” from the “data” volume group
+lvcreate --name data --size 99G data (leave 1% out)
+# show attributes of the logical volume(s)
+lvdisplay
+# show attributes of the logical volume(s)
+lvdisplay -C
+# show attributes of the logical volume(s)
+lvscan
+```
 
 <b>Create Filesystem</b>
 
-    # create ext4 filesystem on logical volume(s)
-    mkfs.ext4 /dev/data/data
-    # create mount point(s)
-    mkdir -p /data
-    # mount logical volume(s)
-    mount /dev/data/data /data/log
-    # check!
-    df -h
+```
+# create ext4 filesystem on logical volume(s)
+mkfs.ext4 /dev/data/data
+# create mount point(s)
+mkdir -p /data
+# mount logical volume(s)
+mount /dev/data/data /data/log
+# check!
+df -h
+```
 
 <b>Add Logical Volumes to /etc/fstab</b>
 
-    # add logical volume(s) to /etc/fstab so they are mounted automatically on reboot
-    echo "/dev/data/data /data ext4 defaults 0 0" >> /etc/fstab
+```
+# add logical volume(s) to /etc/fstab so they are mounted automatically on reboot
+echo "/dev/data/data /data ext4 defaults 0 0" >> /etc/fstab
+```
 
 # Java  
 take java thread dump.
 
-    jmap -dump:format=b,file=$(hostname).hprof <pid>
-    kill -3 <pid>
+```
+jmap -dump:format=b,file=$(hostname).hprof <pid>
+kill -3 <pid>
+```
 
 # PHP  
 [adjusting php-fpm children nginx](http://myshell.co.uk/blog/2012/07/adjusting-child-processes-for-php-fpm-nginx/)
@@ -159,62 +201,86 @@ take java thread dump.
 # Docker
 remove all containers.
 
-    docker rm $(docker ps -aq)
+```
+docker rm $(docker ps -aq)
+```
 
 set docker-machine environment.
 
-    docker-machine env
+```
+docker-machine env
+```
 
 find if you are in a docker container.
 
-    grep docker /proc/1/cgroup > /dev/null
-    if [ $? == 0 ]; then
-      echo "we're in a docker container!"
-    fi
+```
+grep docker /proc/1/cgroup > /dev/null
+if [ $? == 0 ]; then
+  echo "we're in a docker container!"
+fi
+```
 
 # Vagrant
 After updating vagrant you should also update the guest additions
 You can find them here: http://download.virtualbox.org/virtualbox/
 
-    wget http://download.virtualbox.org/virtualbox/5.0.4/VBoxGuestAdditions_5.0.4.iso
-    sudo mv VBoxGuestAdditions_5.0.4.iso /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+```
+wget http://download.virtualbox.org/virtualbox/5.0.4/VBoxGuestAdditions_5.0.4.iso
+sudo mv VBoxGuestAdditions_5.0.4.iso /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso
+```
 
 # Git  
 [undo almost anything with git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
 
 pretty format  
 
-    git log -1 --pretty=format:"%nCommit: %H%nAuthor: %an%nDate: %ad%nTag: %d%nSubject: %s%n%n"
+```
+git log -1 --pretty=format:"%nCommit: %H%nAuthor: %an%nDate: %ad%nTag: %d%nSubject: %s%n%n"
+```
 
 get starred repositories rss pages for a user
 
-    curl -s https://api.github.com/users/itskarma/starred | jq -r .[].html_url | sed 's/$/\/releases.atom/'
+```
+curl -s https://api.github.com/users/itskarma/starred | jq -r .[].html_url | sed 's/$/\/releases.atom/'
+```
     
 rewriting the most recent commit message
 
-    git commit --amend
+```
+git commit --amend
+```
 
 # Postgres  
 list databases
 
-    \l
+```
+\l
+```
 
 switch databases
 
-    \connect database_name
+```
+\connect database_name
+```
 
 list all tables in current database
 
-    \dt
+```
+\dt
+```
 
 quit / log out
 
-    \q
+```
+\q
+```
 
 # SQL
 show max connections
 
-    show max_connections;
+```
+show max_connections;
+```
 
 # Dev Tool Links
 Homebrew - brew.sh  

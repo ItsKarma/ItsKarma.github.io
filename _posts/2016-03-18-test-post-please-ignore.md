@@ -1,16 +1,14 @@
 ---
-layout: post
+layout: base.html
 title:  "test post please ignore"
 date:   2016-03-19
-created:   2016-03-18
-author:   Matt Karmazyn
-categories: jekyll
 ---
 test
 
-<!--break-->
 
-    test
+```
+test
+```
 
 test  
 test

@@ -1,0 +1,23 @@
+---
+pagination:
+  data: collections.redirects
+  size: 1
+  alias: redirect
+permalink: "{{ redirect.oldUrl }}index.html"
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url={{ redirect.newUrl }}">
+  <link rel="canonical" href="{{ redirect.newUrl }}">
+  <title>Redirecting...</title>
+  <script>
+    window.location.href = "{{ redirect.newUrl }}";
+  </script>
+</head>
+<body>
+  <p>This page has moved to <a href="{{ redirect.newUrl }}">{{ redirect.newUrl }}</a></p>
+</body>
+</html>

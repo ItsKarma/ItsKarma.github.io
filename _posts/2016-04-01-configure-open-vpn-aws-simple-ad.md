@@ -1,14 +1,10 @@
 ---
-layout: post
+layout: base.html
 title:  "Configure OpenVPN to AWS Simple AD"
 date:   2016-04-02
-created:   2016-04-01
-author:   Matt Karmazyn
-categories: vpn linux aws ad
 ---
 Connecting OpenVPN to authenticate with AWS Simple AD.
 
-<!--break-->
 AWS provides a redundant Samba4 Active Directory solution, as well as DNS servers for the domain, for less than the price of a single t2.medium instance.
 
 We are going to set up 3 things  
@@ -51,4 +47,4 @@ Bind DN: CN=Administrator,CN=Users,DC=corp,DC=domain,DC=com
 Password: <Administrator Password you set up when creating the domain>  
 Base DN for User Entries: CN=Users,DC=corp,DC=domain,DC=com  
 
-![OpenVPN Settings](../static/img/openvpn_simple_ad.png){:width="500px"}
+![OpenVPN Settings](/img/openvpn_simple_ad.png)

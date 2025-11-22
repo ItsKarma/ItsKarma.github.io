@@ -1,14 +1,10 @@
 ---
-layout: post
+layout: base.html
 title:  "SSH tunnel to private RDS instance"
 date:   2016-03-21
-created:   2016-03-21
-author:   Matt Karmazyn
-categories: ssh linux rds
 ---
 SSH tunneling from your local computer to an RDS instance in a private subnet.
 
-<!--break-->
 
 First you need an instance that you can log into that has access to RDS. I will be calling that bastion. Make sure you add rules on the RDS security group allowing access from the bastion host.
 

@@ -1,0 +1,14 @@
+{
+  "name": "itskarma-site",
+  "version": "1.0.0",
+  "description": "Personal site with 11ty",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "devDependencies": {}
+}

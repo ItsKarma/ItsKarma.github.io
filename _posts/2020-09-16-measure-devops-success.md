@@ -1,14 +1,10 @@
 ---
-layout: post
+layout: base.html
 title:  "Measure DevOps Success"
 date:   2020-09-16
-created:   2020-09-16
-author:   Matt Karmazyn
-categories: devops
 ---
 How to measure the success of DevOps in your organization.
 
-<!--break-->
 
 There are four key metrics you want to measure when trying to determine how successful DevOps is in your organization.
 

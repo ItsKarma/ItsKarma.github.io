@@ -1,14 +1,10 @@
 ---
-layout: post
+layout: base.html
 title:  "What's Inside the Docker Sausage"
 date:   2016-06-30
-created:   2016-06-23
-author:   Matt Karmazyn
-categories: docker linux
 ---
 Cgroups, Namespaces, and beyond.
 
-<!--break-->
 
 We'll talk about the core technology that makes Docker successful.
 
