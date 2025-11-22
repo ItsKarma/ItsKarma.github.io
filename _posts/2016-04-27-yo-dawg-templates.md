@@ -1,16 +1,12 @@
 ---
-layout: post
+layout: base.html
 title:  "Yo Dawg, I heard you like Templates"
 date:   2016-04-27
-created:   2016-04-27
-author:   Matt Karmazyn
-categories: chef consul
 ---
 Creating Consul Templates with Chef's Template resource.
 
-<!--break-->
 
-![Yo Dawg Templates](../static/img/yo_dawg_templates.jpg){:width="400px"}
+![Yo Dawg Templates](/img/yo_dawg_templates.jpg)
 
 ### Consul
 

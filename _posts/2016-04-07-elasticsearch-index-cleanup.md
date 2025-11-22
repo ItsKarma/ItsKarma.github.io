@@ -1,14 +1,10 @@
 ---
-layout: post
+layout: base.html
 title:  "Elasticsearch Index Cleanup"
 date:   2016-04-07
-created:   2016-04-07
-author:   Matt Karmazyn
-categories: elasticsearch aws logstash
 ---
 How to delete old indices to free up space, and also automatically delete old indices as you approach a minimum threshold of available space.
 
-<!--break-->
 
 ## Setting up the tunnel
 for now, I will be providing several links that may be helpful, and I will reference the links with [number]

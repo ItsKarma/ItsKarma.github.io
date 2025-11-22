@@ -1,14 +1,10 @@
 ---
-layout: post
+layout: base.html
 title:  "Deployment Best Practices"
 date:   2016-06-04
-created:   2016-06-04
-author:   Matt Karmazyn
-categories: deployment production security
 ---
 Best practices around deployment
 
-<!--break-->
 
 ## Credentials
 

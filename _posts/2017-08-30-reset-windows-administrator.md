@@ -1,14 +1,10 @@
 ---
-layout: post
+layout: base.html
 title:  "Reset Windows Administrator Password"
 date:   2017-08-30
-created:   2017-08-30
-author:   Matt Karmazyn
-categories: windows password account
 ---
 How to reset the Windows Administrator user password.
 
-<!--break-->
 
 1. Download Ubuntu https://www.ubuntu.com/download/desktop
 2. Create a bootable usb drive

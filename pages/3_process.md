@@ -1,12 +1,8 @@
 ---
-layout: page
+layout: base.html
 title: Process
-comments: true
 permalink: /process/
 ---
-
-- content
-  {:toc}
 
 # Process
 

@@ -1,0 +1,14 @@
+---
+layout: base.html
+title: Writing
+permalink: /writing/
+---
+
+<ul class="post-list">
+{%- for post in collections.posts -%}
+  <li>
+    <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+    <span class="post-date">{{ post.date | readableDate }}</span>
+  </li>
+{%- endfor -%}
+</ul>

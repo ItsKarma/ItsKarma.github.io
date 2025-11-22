@@ -1,14 +1,10 @@
 ---
-layout: post
+layout: base.html
 title:  "XenCenter on Mac"
 date:   2016-07-15
-created:   2016-07-14
-author:   Matt Karmazyn
-categories: xen xencenter mac osx
 ---
 Running XenCenter on Mac.
 
-<!--break-->
 
 How to install and run XenCenter like management software called: OpenXenManager on Mac.
 
