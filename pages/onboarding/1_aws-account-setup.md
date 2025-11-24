@@ -68,7 +68,7 @@ We'll create 5 accounts in addition to the management account:
 
 ---
 
-### Step 1: Create AWS Organization
+### 1. Create AWS Organization
 
 **Note:** Make sure you've completed the Root Account Security steps above before proceeding.
 
@@ -92,7 +92,7 @@ Alternatively, use the AWS Console:
 
 ---
 
-### Step 2: Create Member Accounts
+### 2. Create Member Accounts
 
 Create each account using the AWS CLI. Each account needs a unique email address:
 
@@ -183,7 +183,7 @@ Root
 
 ---
 
-### Step 4: Enable AWS IAM Identity Center (AWS SSO)
+### 4. Enable AWS IAM Identity Center (AWS SSO)
 
 Set up centralized user access across all accounts:
 
@@ -230,7 +230,7 @@ Via AWS Console:
 
 ---
 
-### Step 7: Set Up Cross-Account Access
+### 5. Set Up Cross-Account Access
 
 The `OrganizationAccountAccessRole` was automatically created when you created each account. This role allows administrators in the Management account to assume roles in member accounts.
 
@@ -268,7 +268,7 @@ aws sts get-caller-identity --profile dev-admin
 
 ---
 
-## Step 5: Create IAM Admin User
+### 6. Create IAM Admin User
 
 Create an IAM user with admin access for Terraform execution:
 
@@ -305,7 +305,7 @@ aws sts get-caller-identity --profile terraform-admin
 
 ## What We Accomplished
 
-After completing Step 1, you have:
+After completing this page, you have:
 
 ✅ **Root account secured** with MFA and no access keys  
 ✅ **AWS Organization created** with all features enabled  
@@ -319,7 +319,7 @@ After completing Step 1, you have:
 
 ## Validation Checklist
 
-Before moving to Step 1B, verify:
+Before moving on to the next step, verify:
 
 ```bash
 # Verify Organization exists
@@ -343,17 +343,6 @@ Expected outputs:
 
 ---
 
-## Next Steps
-
-[Continue to Step 1B: Terraform Organization Setup →](/onboarding/step-1b-terraform-organization/)
-
-In Step 1B, you'll:
-- Create the Terraform state infrastructure (S3 bucket and DynamoDB table)
-- Import the state infrastructure into Terraform management
-- Enable organization-wide security features (CloudTrail, GuardDuty, Security Hub, Config)
-- Apply Service Control Policies (SCPs) for governance
-
----
 
 ## Additional Resources
 
@@ -361,3 +350,9 @@ In Step 1B, you'll:
 - [AWS Multi-Account Strategy](https://aws.amazon.com/organizations/getting-started/best-practices/)
 - [IAM Identity Center Getting Started](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html)
 - [Terraform Backend Configuration](https://www.terraform.io/docs/language/settings/backends/s3.html)
+
+---
+
+<div style="display: flex; justify-content: flex-end; margin-top: 32px;">
+  <a href="/onboarding/terraform-organization/" style="text-decoration: none; color: #4ade80; font-weight: 500;">Terraform Organization &rarr;</a>
+</div>

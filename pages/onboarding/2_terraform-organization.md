@@ -20,7 +20,7 @@ Now that we've set up the AWS Organization structure, we'll create the Terraform
 
 ---
 
-## Step 1: Create Terraform State Infrastructure
+## 1. Create Terraform State Infrastructure
 
 Set up remote state storage to enable team collaboration and prevent state conflicts.
 
@@ -87,7 +87,7 @@ Expected outputs:
 
 ---
 
-## Step 2: Import State Resources into Terraform
+## 2. Import State Resources into Terraform
 
 Now that we've manually created the S3 bucket and DynamoDB table, let's bring them under Terraform management so future changes are tracked in code.
 
@@ -307,7 +307,7 @@ git commit -m "Add Terraform config for state backend infrastructure"
 
 ---
 
-## Step 3: Enable Organization-Wide Features
+## 3. Enable Organization-Wide Features
 
 Enable security and governance features across all accounts using Terraform.
 
@@ -573,7 +573,7 @@ After applying, you'll have:
 
 ---
 
-## Step 4: Apply Service Control Policies (SCPs)
+## 4. Apply Service Control Policies (SCPs)
 
 Create SCPs using Terraform to enforce guardrails across all accounts.
 
@@ -783,51 +783,7 @@ Expected outputs:
 
 ---
 
-## Troubleshooting
-
-### Terraform Import Fails
-
-```bash
-# Check if resource already exists
-aws s3api head-bucket --bucket my-company-terraform-state --profile terraform-admin
-
-# Verify DynamoDB table
-aws dynamodb describe-table --table-name terraform-state-lock --profile terraform-admin
-
-# If import fails, check resource IDs match exactly
-```
-
-### GuardDuty Delegation Fails
-
-```bash
-# Check if Security account exists
-aws organizations describe-account --account-id 222222222222
-
-# Verify GuardDuty is enabled in management account
-aws guardduty list-detectors
-```
-
-### SCP Not Taking Effect
-
-```bash
-# Verify SCP is attached
-aws organizations list-targets-for-policy --policy-id p-xxxxxxxxxx
-
-# Check if account is exempt (management account is always exempt from SCPs)
-# Test in a member account to verify SCP works
-```
-
----
-
-## Next Steps
-
-Continue to **[Step 2: Security & Compliance Setup](/onboarding/step-2-security-setup/)** to configure detailed security monitoring and cost controls.
-
----
-
-## Additional Resources
-
-- [Terraform AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
-- [AWS Organizations SCPs](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
-- [AWS CloudTrail Best Practices](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/best-practices-security.html)
-- [GuardDuty in Organizations](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_organizations.html)
+<div style="display: flex; justify-content: space-between; margin-top: 32px;">
+  <a href="/onboarding/aws-account-setup/" style="text-decoration: none; color: #4ade80; font-weight: 500;">&larr; AWS Account Setup</a>
+  <a href="/onboarding/security-setup/" style="text-decoration: none; color: #4ade80; font-weight: 500;">Security & Compliance Setup &rarr;</a>
+</div>

@@ -4,16 +4,6 @@ title: "Infrastructure Deployment"
 permalink: /onboarding/infrastructure/
 ---
 
-# Infrastructure Deployment
-
-Deploy core infrastructure using Terraform: VPC, EKS cluster, and observability stack.
-
-**Time to Complete:** 4-6 hours  
-**Prerequisites:** [Security & Compliance Setup](/onboarding/security-setup/) completed
-
-## Overview
-
-In this step, we'll deploy:
 1. VPC networking with public/private subnets
 2. EKS Kubernetes cluster
 3. Observability stack (Prometheus, Grafana, Loki)
@@ -242,10 +232,7 @@ Before moving to Step 4, verify:
 
 ---
 
-## Next Steps
-
-[Continue to Step 4: CI/CD Pipeline Setup →](/onboarding/step-4-cicd-pipeline/)
-
-- Configure GitHub Actions workflows
-- Set up automated deployments
-- Implement security scanning
+<div style="display: flex; justify-content: space-between; margin-top: 32px;">
+  <a href="/onboarding/security-setup/" style="text-decoration: none; color: #4ade80; font-weight: 500;">&larr; Security & Compliance Setup</a>
+  <a href="/onboarding/cicd-pipeline/" style="text-decoration: none; color: #4ade80; font-weight: 500;">CI/CD Pipeline Setup &rarr;</a>
+</div>

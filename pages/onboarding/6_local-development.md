@@ -627,15 +627,16 @@ kubectl delete pod <pod-name> -n local-dev
 
 ---
 
-## Next Steps
-
-Continue to **[Step 6: Production Migration](/onboarding/step-6-production-migration/)** to plan and execute migration of existing applications.
-
----
-
 ## Additional Resources
 
 - [Docker Compose Documentation](https://docs.docker.com/compose/)
 - [K3d Documentation](https://k3d.io/)
 - [K3s Documentation](https://k3s.io/)
 - [Kubernetes Local Development Guide](https://kubernetes.io/docs/tasks/debug/)
+
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 32px;">
+  <a href="/onboarding/cicd-pipeline/" style="text-decoration: none; color: #4ade80; font-weight: 500;">&larr; CI/CD Pipeline Setup</a>
+  <a href="/onboarding/production-migration/" style="text-decoration: none; color: #4ade80; font-weight: 500;">Production Migration &rarr;</a>
+</div>

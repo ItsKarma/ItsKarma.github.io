@@ -539,15 +539,16 @@ docker pull ghcr.io/your-org/your-app:latest
 
 ---
 
-## Next Steps
-
-Continue to **[Step 5: Local Development](/onboarding/step-5-local-development/)** to set up Docker Compose and K3s for local testing.
-
----
-
 ## Additional Resources
 
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [ArgoCD Documentation](https://argo-cd.readthedocs.io/)
 - [Kustomize Documentation](https://kustomize.io/)
 - [Trivy Documentation](https://aquasecurity.github.io/trivy/)
+
+---
+
+<div style="display: flex; justify-content: space-between; margin-top: 32px;">
+  <a href="/onboarding/infrastructure/" style="text-decoration: none; color: #4ade80; font-weight: 500;">&larr; Infrastructure Deployment</a>
+  <a href="/onboarding/local-development/" style="text-decoration: none; color: #4ade80; font-weight: 500;">Local Development Environment &rarr;</a>
+</div>

@@ -837,3 +837,9 @@ Continue to iterate and improve based on team feedback and evolving requirements
 - [Kubernetes Production Best Practices](https://learnk8s.io/production-best-practices)
 - [The Twelve-Factor App](https://12factor.net/)
 - [Site Reliability Engineering (SRE) Book](https://sre.google/books/)
+
+---
+
+<div style="display: flex; justify-content: flex-start; margin-top: 32px;">
+  <a href="/onboarding/local-development/" style="text-decoration: none; color: #4ade80; font-weight: 500;">&larr; Local Development Environment</a>
+</div>

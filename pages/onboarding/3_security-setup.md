@@ -4,16 +4,6 @@ title: "Security & Compliance Setup"
 permalink: /onboarding/security-setup/
 ---
 
-# Security & Compliance Setup
-
-Establish security monitoring and cost controls before deploying infrastructure.
-
-**Time to Complete:** 2-3 hours  
-**Prerequisites:** [AWS Account Setup](/onboarding/aws-account-setup/) completed
-
-## Overview
-
-In this step, we'll configure:
 1. AWS Config for compliance monitoring
 2. Cost budgets and alerts
 3. IAM credential management policies
@@ -163,10 +153,7 @@ Before moving to Step 3, verify:
 
 ---
 
-## Next Steps
-
-[Continue to Step 3: Infrastructure Deployment →](/onboarding/step-3-infrastructure/)
-
-- Deploy VPC networking
-- Create EKS cluster
-- Set up observability stack
+<div style="display: flex; justify-content: space-between; margin-top: 32px;">
+   <a href="/onboarding/terraform-organization/" style="text-decoration: none; color: #4ade80; font-weight: 500;">&larr; Terraform Organization</a>
+   <a href="/onboarding/infrastructure/" style="text-decoration: none; color: #4ade80; font-weight: 500;">Infrastructure Deployment &rarr;</a>
+</div>
