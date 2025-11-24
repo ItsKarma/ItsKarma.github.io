@@ -21,51 +21,138 @@
       padding: 20px;
     }
     
-    .container {
-      max-width: 800px;
+    .site-wrapper {
+      display: grid;
+      grid-template-columns: 200px 700px 200px;
+      gap: 40px;
+      max-width: 1140px;
       margin: 0 auto;
-      background: #101a28;
-      padding: 40px;
+      align-items: start;
     }
     
-    header {
-      border-bottom: 2px solid #1e3a5f;
+    .site-header {
       margin-bottom: 30px;
-      padding-bottom: 20px;
     }
     
-    header h1 {
+    .site-title {
       font-size: 2em;
-      margin-bottom: 10px;
+      margin: 0;
+      line-height: 1.2;
     }
     
-    header h1 a {
+    .site-title a {
       color: #d1d5db;
       text-decoration: none;
     }
     
-    header h1 a:hover {
+    .site-title a:hover {
       color: #e4e6eb;
     }
     
+    .sidebar-left {
+      position: sticky;
+      top: 20px;
+    }
+    
+    .logo-link {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+      transition: opacity 0.2s;
+    }
+    
+    .logo-link:hover {
+      opacity: 0.8;
+    }
+    
+    .logo-link img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0;
+    }
+    
     nav {
-      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
     
     nav a {
       color: #8b98ab;
       text-decoration: none;
-      margin-right: 20px;
       font-size: 0.95em;
       transition: color 0.2s;
+      padding: 4px 0;
     }
     
     nav a:hover {
       color: #4ade80;
     }
     
+    .content-wrapper {
+      background: #101a28;
+    }
+    
+    .content-header {
+      border-bottom: 2px solid #1e3a5f;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+    }
+    
     main {
       margin-bottom: 40px;
+    }
+    
+    .sidebar-right {
+      position: sticky;
+      top: 20px;
+    }
+    
+    .toc {
+      background: #0d1117;
+      border: 1px solid #1e3a5f;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    
+    .toc-title {
+      font-size: 1em;
+      color: #4ade80;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .toc-list {
+      list-style: none;
+      margin: 0;
+    }
+    
+    .toc-list li {
+      margin-bottom: 8px;
+    }
+    
+    .toc-list a {
+      color: #8b98ab;
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s;
+      display: block;
+    }
+    
+    .toc-list a:hover {
+      color: #4ade80;
+    }
+    
+    .toc-list li.toc-h3 {
+      margin-left: 15px;
+      font-size: 0.9em;
+    }
+    
+    .toc-list a.active {
+      color: #4ade80;
+      font-weight: 600;
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -217,63 +304,124 @@
       margin: 15px 0;
     }
     
+    @media (max-width: 1280px) {
+      .site-wrapper {
+        grid-template-columns: 180px minmax(0, 700px) 180px;
+        gap: 30px;
+      }
+    }
+    
+    @media (max-width: 1024px) {
+      .site-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .sidebar-left {
+        position: static;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        border-bottom: 2px solid #1e3a5f;
+        padding-bottom: 20px;
+      }
+      
+      .logo-link {
+        margin-bottom: 0;
+        width: 50px;
+        height: 50px;
+      }
+      
+      .site-header {
+        margin-bottom: 0;
+      }
+      
+      .site-title {
+        font-size: 1.5em;
+      }
+      
+      nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+      }
+      
+      nav a {
+        padding: 0;
+      }
+      
+      .sidebar-right {
+        position: static;
+        order: -1;
+      }
+      
+      .content-header {
+        display: none;
+      }
+    }
+    
     @media (max-width: 768px) {
       body {
         padding: 10px;
       }
       
-      .container {
-        padding: 20px;
-      }
-      
-      header h1 {
-        font-size: 1.5em;
-      }
-      
-      nav a {
-        display: block;
-        margin-bottom: 10px;
+      nav {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1><a href="/">Matt Karmazyn</a></h1>
-      <nav>
-        <a href="/">About</a>
-        <a href="/writing/">Writing</a>
-        <a href="/toolbox/">Toolbox</a>
-        <a href="/mystack/">My Stack</a>
-        <a href="/process/">Process</a>
-        <a href="/onboarding/">Onboarding</a>
-      </nav>
-    </header>
+  <div class="site-wrapper">
+    <aside class="sidebar-left">
+      <div>
+        <a href="/" class="logo-link" aria-label="Home">
+          <img src="/favicon.svg" alt="ItsKarma Logo">
+        </a>
+        <nav>
+          <a href="/">About</a>
+          <a href="/writing/">Writing</a>
+          <a href="/toolbox/">Toolbox</a>
+          <a href="/mystack/">My Stack</a>
+          <a href="/process/">Process</a>
+          <a href="/onboarding/">Onboarding</a>
+        </nav>
+      </div>
+    </aside>
     
-    <main>
-      {{ content | safe }}
-    </main>
+    <div class="content-wrapper">
+      <header class="content-header">
+        <h1 class="site-title"><a href="/">Matt Karmazyn</a></h1>
+      </header>
+      
+      <main>
+        {{ content | safe }}
+      </main>
+      
+        <p style="display: flex; align-items: center; gap: 10px;">
+          <a href="https://github.com/ItsKarma" aria-label="GitHub" target="_blank" rel="noopener noreferrer" style="display: inline-flex; text-decoration: none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/matthewkarmazyn/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="display: inline-flex; text-decoration: none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="mailto:matt@itskarma.wtf" aria-label="Email" style="display: inline-flex; text-decoration: none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
+        </p>
+      </footer>
+    </div>
     
-    <footer>
-      <p style="display: flex; align-items: center; gap: 10px;">
-        <a href="https://github.com/ItsKarma" aria-label="GitHub" target="_blank" rel="noopener noreferrer" style="display: inline-flex; text-decoration: none;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/matthewkarmazyn/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style="display: inline-flex; text-decoration: none;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-          </svg>
-        </a>
-        <a href="mailto:matt@itskarma.wtf" aria-label="Email" style="display: inline-flex; text-decoration: none;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display: block;">
-            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
-        </a>
-      </p>
-    </footer>
+    <aside class="sidebar-right">
+      <div id="toc-container"></div>
+    </aside>
   </div>
   
   <script>
@@ -294,6 +442,92 @@
       }
     });
     
+    // Generate Table of Contents
+    function generateTOC() {
+      const tocContainer = document.getElementById('toc-container');
+      const headings = document.querySelectorAll('main h2, main h3');
+      
+      if (headings.length === 0) {
+        return; // No headings, no TOC
+      }
+      
+      const toc = document.createElement('div');
+      toc.className = 'toc';
+      
+      const title = document.createElement('div');
+      title.className = 'toc-title';
+      title.textContent = 'On This Page';
+      toc.appendChild(title);
+      
+      const list = document.createElement('ul');
+      list.className = 'toc-list';
+      
+      headings.forEach((heading, index) => {
+        // Create ID if it doesn't exist
+        if (!heading.id) {
+          heading.id = `heading-${index}`;
+        }
+        
+        const li = document.createElement('li');
+        if (heading.tagName === 'H3') {
+          li.className = 'toc-h3';
+        }
+        
+        const link = document.createElement('a');
+        link.href = `#${heading.id}`;
+        link.textContent = heading.textContent.replace('#', '').trim();
+        
+        // Smooth scroll on click
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.pushState(null, null, `#${heading.id}`);
+        });
+        
+        li.appendChild(link);
+        list.appendChild(li);
+      });
+      
+      toc.appendChild(list);
+      tocContainer.appendChild(toc);
+      
+      // Highlight current section on scroll
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateActiveTOC(headings);
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    }
+    
+    function updateActiveTOC(headings) {
+      const scrollPosition = window.scrollY + 100;
+      
+      let currentHeading = null;
+      headings.forEach(heading => {
+        if (heading.offsetTop <= scrollPosition) {
+          currentHeading = heading;
+        }
+      });
+      
+      // Remove all active classes
+      document.querySelectorAll('.toc-list a').forEach(link => {
+        link.classList.remove('active');
+      });
+      
+      // Add active class to current section
+      if (currentHeading) {
+        const activeLink = document.querySelector(`.toc-list a[href="#${currentHeading.id}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+      }
+    }
+    
     // Open external links in new tab
     document.querySelectorAll('main a').forEach(link => {
       if (link.hostname !== window.location.hostname && !link.href.startsWith('mailto:')) {
@@ -301,6 +535,13 @@
         link.setAttribute('rel', 'noopener noreferrer');
       }
     });
+    
+    // Generate TOC when page loads
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', generateTOC);
+    } else {
+      generateTOC();
+    }
   </script>
 </body>
 </html>
