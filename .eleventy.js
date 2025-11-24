@@ -1,4 +1,26 @@
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+
 module.exports = function(eleventyConfig) {
+  // Configure markdown with anchor links
+  const markdownLib = markdownIt({ html: true })
+    .use(markdownItAnchor, {
+      permalink: markdownItAnchor.permalink.linkInsideHeader({
+        symbol: '#',
+        placement: 'before',
+        class: 'header-anchor'
+      }),
+      level: [1, 2, 3],
+      slugify: (s) => s.toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+    });
+  
+  eleventyConfig.setLibrary("md", markdownLib);
+
+  // Ignore examples directory (code samples, not for site)
+  eleventyConfig.ignores.add("examples/**/*");
+
   // Copy static assets
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("CNAME");

@@ -72,11 +72,32 @@
       margin: 20px 0 10px 0;
       line-height: 1.3;
       color: #4ade80;
+      position: relative;
     }
     
     h1 { font-size: 2em; }
     h2 { font-size: 1.5em; border-bottom: 1px solid #1e3a5f; padding-bottom: 5px; }
     h3 { font-size: 1.3em; }
+    
+    .header-anchor {
+      color: #8b98ab;
+      opacity: 0;
+      font-weight: normal;
+      transition: opacity 0.2s;
+      position: absolute;
+      left: -1.2em;
+      text-decoration: none;
+    }
+    
+    h1:hover .header-anchor,
+    h2:hover .header-anchor,
+    h3:hover .header-anchor {
+      opacity: 1;
+    }
+    
+    .header-anchor:hover {
+      color: #4ade80;
+    }
     
     p {
       margin-bottom: 15px;
@@ -226,6 +247,7 @@
         <a href="/toolbox/">Toolbox</a>
         <a href="/mystack/">My Stack</a>
         <a href="/process/">Process</a>
+        <a href="/onboarding/">Onboarding</a>
       </nav>
     </header>
     
