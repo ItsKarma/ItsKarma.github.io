@@ -31,7 +31,7 @@ Use AWS CloudFormation StackSets to deploy the `GithubActionsTerraformExecution`
 
 ## Step 1: Create the CloudFormation Template
 
-Create `github-oidc-role-stackset.yaml`:
+Create `member-account-foundation-stackset.yaml`:
 
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
@@ -325,8 +325,8 @@ export ORG_NAME="itskarma"
 
 # Create the StackSet
 aws cloudformation create-stack-set \
-  --stack-set-name github-oidc-member-role \
-  --template-body file://github-oidc-role-stackset.yaml \
+  --stack-set-name member-account-foundation \
+  --template-body file://member-account-foundation-stackset.yaml \
   --parameters \
       ParameterKey=ManagementAccountId,ParameterValue=$MGMT_ACCOUNT_ID \
       ParameterKey=GitHubOrg,ParameterValue=$GITHUB_ORG \
@@ -340,7 +340,7 @@ aws cloudformation create-stack-set \
 Expected output:
 ```json
 {
-    "StackSetId": "github-oidc-member-role:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    "StackSetId": "member-account-foundation:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 }
 ```
 
@@ -357,7 +357,7 @@ echo "Organization Root ID: $ROOT_ID"
 
 # Deploy to entire organization (all member accounts)
 aws cloudformation create-stack-instances \
-  --stack-set-name github-oidc-member-role \
+  --stack-set-name member-account-foundation \
   --deployment-targets OrganizationalUnitIds=$ROOT_ID \
   --regions us-east-2
 ```
@@ -375,15 +375,15 @@ This will deploy the `GithubActionsTerraformExecution` role to **all member acco
 ```bash
 # Check StackSet status
 aws cloudformation describe-stack-set \
-  --stack-set-name github-oidc-member-role
+  --stack-set-name member-account-foundation
 
 # List all stack instances
 aws cloudformation list-stack-instances \
-  --stack-set-name github-oidc-member-role
+  --stack-set-name member-account-foundation
 
 # Get operation status
 aws cloudformation list-stack-set-operations \
-  --stack-set-name github-oidc-member-role
+  --stack-set-name member-account-foundation
 ```
 
 Wait for `Status: SUCCEEDED` on all instances (typically 2-5 minutes).
@@ -414,12 +414,12 @@ When you need to change permissions or trust policy:
 
 ```bash
 # Update the YAML template
-vim github-oidc-role-stackset.yaml
+vim member-account-foundation-stackset.yaml
 
 # Update the StackSet
 aws cloudformation update-stack-set \
-  --stack-set-name github-oidc-member-role \
-  --template-body file://github-oidc-role-stackset.yaml \
+  --stack-set-name member-account-foundation \
+  --template-body file://member-account-foundation-stackset.yaml \
   --parameters \
       ParameterKey=ManagementAccountId,UsePreviousValue=true \
       ParameterKey=GitHubOrg,UsePreviousValue=true \
@@ -430,7 +430,7 @@ aws cloudformation update-stack-set \
 
 # Deploy the update to all instances
 aws cloudformation create-stack-instances \
-  --stack-set-name github-oidc-member-role \
+  --stack-set-name member-account-foundation \
   --deployment-targets OrganizationalUnitIds=ou-xxxx-yyyyyyyy \
   --regions us-east-2 \
   --operation-preferences MaxConcurrentCount=5
@@ -446,7 +446,7 @@ If you already had an existing account before following this guide, you can manu
 
 ```bash
 aws cloudformation create-stack-instances \
-  --stack-set-name github-oidc-member-role \
+  --stack-set-name member-account-foundation \
   --accounts 444444444444 \
   --regions us-east-2
 ```
@@ -486,7 +486,7 @@ aws organizations enable-aws-service-access \
 The account may not have the required execution role. Check:
 ```bash
 aws cloudformation describe-stack-set-operation \
-  --stack-set-name github-oidc-member-role \
+  --stack-set-name member-account-foundation \
   --operation-id <operation-id>
 ```
 
