@@ -42,18 +42,25 @@ Set up GitHub Actions to assume short‑lived AWS roles via OpenID Connect (OIDC
 One-time setup to allow StackSets to deploy across your organization:
 
 ```bash
+# 1) Allow CloudFormation StackSets to integrate with Organizations
 aws organizations enable-aws-service-access \
   --service-principal member.org.stacksets.cloudformation.amazonaws.com
+
+# 2) Activate Organizations access from the CloudFormation side
+aws cloudformation activate-organizations-access
 ```
 
-Verify it was enabled:
+Verify both are enabled:
 ```bash
 aws organizations list-aws-service-access-for-organization | grep stacksets
+aws cloudformation describe-organizations-access --query Status --output text
 ```
 
-Expected output: `member.org.stacksets.cloudformation.amazonaws.com`
+Expected outputs:
+- `member.org.stacksets.cloudformation.amazonaws.com`
+- `ENABLED`
 
-> **Why not in CloudFormation?** AWS [recommends enabling service access](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnableAWSServiceAccess.html) through the service's own console or CLI commands rather than directly through the Organizations API. This ensures the service (CloudFormation StackSets in this case) can properly create required resources. This is a one-time operation that only needs to be run once per organization.
+> Why not in CloudFormation? There is no native CloudFormation resource to toggle these org-level settings. AWS recommends enabling service access via the service console or CLI.
 
 ---
 

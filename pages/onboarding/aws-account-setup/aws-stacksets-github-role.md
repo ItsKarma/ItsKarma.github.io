@@ -314,6 +314,12 @@ Outputs:
 
 > **Note:** Ensure StackSets trusted access is enabled before proceeding. This was done in Step 1 of the [GitHub OIDC Connector](/onboarding/aws-account-setup/aws-github-oidc-connector/) guide.
 
+Quick check (should show ENABLED):
+```bash
+aws organizations list-aws-service-access-for-organization | grep stacksets
+aws cloudformation describe-organizations-access --query Status --output text
+```
+
 Replace placeholders with your values:
 
 ```bash
@@ -473,12 +479,14 @@ aws cloudformation create-stack-instances \
 Verify trusted access is enabled:
 ```bash
 aws organizations list-aws-service-access-for-organization | grep stacksets
+aws cloudformation describe-organizations-access --query Status --output text
 ```
 
-If not enabled, enable it:
+If not enabled, enable both toggles:
 ```bash
 aws organizations enable-aws-service-access \
   --service-principal member.org.stacksets.cloudformation.amazonaws.com
+aws cloudformation activate-organizations-access
 ```
 
 ### Stack instance stuck in `OUTDATED` status
