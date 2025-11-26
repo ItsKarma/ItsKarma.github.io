@@ -233,6 +233,6 @@ Before moving to Step 4, verify:
 ---
 
 <div style="display: flex; justify-content: space-between; margin-top: 32px;">
-  <a href="/onboarding/security-setup/" style="text-decoration: none; color: #4ade80; font-weight: 500;">&larr; Security & Compliance Setup</a>
-  <a href="/onboarding/cicd-pipeline/" style="text-decoration: none; color: #4ade80; font-weight: 500;">CI/CD Pipeline Setup &rarr;</a>
+  <a href="/onboarding/basic-security/" style="text-decoration: none; color: #4ade80; font-weight: 500;">&larr; Basic Security</a>
+  <a href="/onboarding/cicd-pipeline/" style="text-decoration: none; color: #4ade80; font-weight: 500;">CI/CD Pipeline &rarr;</a>
 </div>

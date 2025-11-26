@@ -35,7 +35,7 @@ By following this process, you'll establish:
 
 Follow these steps in order to build a complete, production-ready infrastructure:
 
-### 1. [AWS Account Setup](/onboarding/aws-account-setup/)
+### 1. AWS Account Setup
 **Time: 2-4 hours**
 
 Set up the foundation for secure AWS infrastructure:
@@ -48,7 +48,7 @@ Set up the foundation for secure AWS infrastructure:
 
 ---
 
-### 2. [Terraform Organization Setup](/onboarding/terraform-organization/)
+### 2. Terraform Organization Setup
 **Time: 2-3 hours**
 
 Bring infrastructure under Terraform management:
@@ -61,7 +61,7 @@ Bring infrastructure under Terraform management:
 
 ---
 
-### 3. [Security & Compliance Setup](/onboarding/step-2-security-setup/)
+### 3. Security & Compliance Setup
 **Time: 2-3 hours**
 
 Establish security monitoring and cost controls:
@@ -74,7 +74,7 @@ Establish security monitoring and cost controls:
 
 ---
 
-### 4. [Infrastructure Deployment](/onboarding/infrastructure/)
+### 4. Infrastructure Deployment
 **Time: 4-6 hours**
 
 Build core infrastructure with Terraform:
@@ -87,7 +87,7 @@ Build core infrastructure with Terraform:
 
 ---
 
-### 5. [CI/CD Pipeline Setup](/onboarding/cicd-pipeline/)
+### 5. CI/CD Pipeline Setup
 **Time: 3-4 hours**
 
 Automate building, testing, and deployment:
@@ -100,7 +100,7 @@ Automate building, testing, and deployment:
 
 ---
 
-### 6. [Local Development Environment](/onboarding/local-development/)
+### 6. Local Development Environment
 **Time: 1-2 hours**
 
 Enable rapid local development and testing:
@@ -113,7 +113,7 @@ Enable rapid local development and testing:
 
 ---
 
-### 7. [Production Migration](/onboarding/production-migration/)
+### 7. Production Migration
 **Time: Ongoing (weeks)**
 
 Execute phased migration of existing applications:
@@ -161,11 +161,4 @@ The key is establishing the foundation early so migration can proceed incrementa
 
 ## Get Started
 
-**Ready to begin?** Start with [Step 1: AWS Account Setup](/onboarding/step-1-aws-account-setup/)
-
-Each step includes:
-- Clear time estimates and prerequisites
-- Executable commands you can copy and paste
-- Validation checklists to verify success
-- Troubleshooting guides for common issues
-- Links to next steps
+**Ready to begin?** Start with [Step 1: AWS Account Setup](/onboarding/aws-account-setup/)
